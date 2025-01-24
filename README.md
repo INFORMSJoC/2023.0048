@@ -4,6 +4,12 @@
 
 In what below we provide a detailed description on how to use our codes to generate each of the figures which are in the results folder.
 
+## Data for Prevalence Rates Used in all Code files
+Calculations are being done in the excel file named "DataForPrevalenceRates" in the data folder in the sheets "GRP", "Budget(1)" and "Budget(2)".
+Columns C, D and E in Sheet "Budget(2)" are the mean, upper, and lower bounds of the prevalence rates for each disease we have in the code files
+
+
+
 ## Figure named "Computational Complexity":
 1) run the code ******DR HADI***** to generate the csv file titled "caseStudyNumericalExperimentsminmaxregret".
 2) run the code "Refined_Algo_ComputationalComplexity-Randomized" to generate the numpy data titled "data when N=25", "data when N=50", and "data when N=100".
