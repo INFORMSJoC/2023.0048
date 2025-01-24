@@ -1,107 +1,141 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# Paper's Title: Optimal System Adjustment Under Operational Constraints with Applications to Infectious Disease Screening
 
-This archive is distributed in association with the [INFORMS Journal on
-Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
+In what below we provide a detailed description on how to use our codes to generate each of the figures which are in the results folder.
 
-The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
+## Figure named "Computational Complexity":
+1) run the code ******DR HADI***** to generate the csv file titled "caseStudyNumericalExperimentsminmaxregret".
+2) run the code "Refined_Algo_ComputationalComplexity-Randomized" to generate the numpy data titled "data when N=25", "data when N=50", and "data when N=100".
+3) run the code "ChangeFormatComputationalComplextity_random and minmax" to change and fix the format of the above outputs
+4) run the code "PlottingComputationalComplexity_random and minmax" to generate the figures
 
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
 
-## Cite
+## Figure named "GroupSizeWithTime":
+1) run the code "Regret_GroupTesting", this will generate the following data files 
+ a) "F_constrained_matrix_of_ks_RegretAPP1"
+ b) "solutionovertime_RegretAPP1"
+ c) "group_size_path_of_ksRegretAPP1"
+ d) "path_matrix_of_ksRegretAPP1"
+Those files are used to get the numbers inside the code file "PlottingGroupSizewithTime"
+2) run the code "PlottingGroupSizewithTime" to generate the figure
 
-To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2019.0000
+## Figure named "PerTimeCost_GRP":
+1) run the code "Regret_GroupTesting", this will generate the following data files for all K values
+ a) "F_constrained_matrix_of_ks_RegretAPP1"
+ b) "solutionovertime_RegretAPP1"
+ c) "group_size_path_of_ksRegretAPP1"
+ d) "path_matrix_of_ksRegretAPP1"
+2) run the code "PureRobust_GroupTesting", this will generate the following data files 
+ a) "F_constrained_matrix_of_ks_RobustAPP1"
+ b) "solutionovertime_RobustAPP1"
+ c) "group_size_path_of_ksRobustAPP1"
+ d) "path_matrix_of_ksRobustAPP1"
+Those files are used to know the numbers used in "PlottingFunction_GroupTesting_ActualData-with Robust", note that one could also read those files,
+but in this code we copied and pasted the values for those data files inside the code, from the console where the numbers for steps 1 and 2 were printed.
+Note that for the data files 1a), 1b), 1c), and 1d), and 2a), 2b), 2c), and 2d), 
+we copied only the data for K=0, 1, 2, 3, i.e., the first 4 elements of each data structure: this is according to the following:
+F_of_n_star_continuous in "PlottingFunction_GroupTesting_ActualData-with Robust" is F_of_n_star_continuous in "Regret_GroupTesting"
+F_of_n_equal_16 in "PlottingFunction_GroupTesting_ActualData-with Robust" is F_of_n_equal_16 in "Regret_GroupTesting"
+F_constrained_matrix_of_ks in "PlottingFunction_GroupTesting_ActualData-with Robust" is F_constrained_matrix_of_ks in "Regret_GroupTesting"
+F_constrained_matrix_of_ks_Robust in "PlottingFunction_GroupTesting_ActualData-with Robust" is F_constrained_matrix_of_ks in "PureRobust_GroupTesting"
+path_matrix_of_ks in "PlottingFunction_GroupTesting_ActualData-with Robust" is path_matrix_of_ks in "Regret_GroupTesting"
+group_size_path_of_ks in "PlottingFunction_GroupTesting_ActualData-with Robust" is group_size_path_of_ks in "Regret_GroupTesting"
 
-https://doi.org/10.1287/ijoc.2019.0000.cd
+Similarly, numbers for MinMaxDistance, Total_Average_distance, MinMaxDistance_from16, and Total_Average_distance_from16_Robust which are in 
+the code file "PlottingFunction_GroupTesting_ActualData-with Robust" are also copied and pasted from the console 
+for the following variables MinMaxDistance, Total_Average_distance, MinMaxDistance_from16, Total_Average_distance_from16
+from 1) and Total_Average_distance_from16 from 2)(resp.), (again first 4 elements)
+Now that we have all values needed in "PlottingFunction_GroupTesting_ActualData-with Robust", then we,
+2) run the code "PlottingFunction_GroupTesting_ActualData-with Robust" to generate the figure
 
-Below is the BibTex for citing this snapshot of the repository.
 
-```
-@misc{CacheTest,
-  author =        {T. Ralphs},
-  publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
-  note =          {Available for download at https://github.com/INFORMSJoC/2019.0000},
-}  
-```
 
-## Description
+## Figure named "PerTimeCost_Budget":
+1) run the code "Regret_Budget", this will generate the following data files for all K values
+ a) "F_constrained_matrix_of_ks_RegretAPP2"
+ b) "solutionovertime_RegretAPP2"
+ c) "group_size_path_of_ksRegretAPP2"
+ d) "path_matrix_of_ksRegretAPP2"
+2) run the code "PureRobust_Budget", this will generate the following data files 
+ a) "F_constrained_matrix_of_ks_RobustAPP2"
+ b) "solutionovertime_RobustAPP2"
+ c) "group_size_path_of_ksRobustAPP2"
+ d) "path_matrix_of_ksRobustAPP2"
+Those files are used to know the numbers used in "PlottingFunction_Budget_ActualData-with Robust", note that one could also read those files,
+but in this code we copied and pasted the values for those data files inside the code, from the console where the numbers for steps 1 and 2 were printed.
+Note that for the data files 1a), 1b), 1c), and 1d), and 2a), 2b), 2c), and 2d), 
+we copied only the data for K=0, 1, 2, 3, i.e., the first 4 elements of each data structure: this is according to the following:
+F_continuous_array in "PlottingFunction_Budget_ActualData-with Robust" is function_continuous_case in "Regret_Budget"
+F_constrained_matrix_of_ks in "PlottingFunction_Budget_ActualData-with Robust" is F_constrained_matrix_of_ks in "Regret_Budget"
+F_constrained_matrix_of_ks_Robust in "PlottingFunction_Budget_ActualData-with Robust" is F_constrained_matrix_of_ks in "PureRobust_Budget"
+path_matrix_of_ks in "PlottingFunction_Budget_ActualData-with Robust" is path_matrix_of_ks in "Regret_Budget"
+budget_path_3d_matrix_of_ks in "PlottingFunction_Budget_ActualData-with Robust" is budget_path_3d_matrix_of_ks in "Regret_Budget"
 
-The goal of this software is to demonstrate the effect of cache optimization.
+Similarly, numbers for MinMaxDistance, Total_Average_distance, and Total_Average_distance_Rob which are in 
+the code file "PlottingFunction_Budget_ActualData-with Robust" are also copied and pasted from the console 
+for the following variables MinMaxDistance, Total_Average_distance from 1) and Total_Average_distance from 2)(resp.), (again first 4 elements)
+Now that we have all values needed in "PlottingFunction_Budget_ActualData-with Robust", then we,
+2) run the code "PlottingFunction_Budget_ActualData-with Robust" to generate the figure
 
-## Building
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+## Figure named "Prev_Babesiosis_WNV":
+1) run the code "AdditionalLaTeXFigures", lines 1-5 (to import packages)and lines 249-319 (to generate the figure)
 
-```
-make mult
-```
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
+## Figure named "Prev_WNV_Reported Numbers":
+1) run the code "AdditionalLaTeXFigures", lines 1-5 (to import packages)and lines 137-183 (to generate the figure)
 
-```
-make clean
-make sum
-```
 
-Be sure to make clean before building a different version of the code.
+## Figure named "UncertaintySet_CI":
+1) run the code "AdditionalLaTeXFigures", lines 1-26 (to import packages and define function)and lines 326-359 (to generate the figure)
 
-## Results
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+## Figure named "YearlyBudget":
+1) run the code "YearlyBudget" and copy from the console the following data and paste them in the file "PlottingYearlyBudget_K=3"
+2) run code "PerTimeCost_Budget" and generating 1)a, 1)b, 1)c, and 1)d and copy from the console the following data and paste them in the file "PlottingYearlyBudget_K=3"
+Step 1) and 2) here are as follows:
+Path_avg_B in "PlottingYearlyBudget_K=3" is avg_bd_solution_path in "YearlyBudget"
+avg_bd_solution_path in "PlottingYearlyBudget_K=3" is avg_bd_solution in "YearlyBudget"
+X_path_avg_Bnotrounded in "PlottingYearlyBudget_K=3" is X_allocation_path in "YearlyBudget"
+f_avg_B in "PlottingYearlyBudget_K=3" is function_constrained_case in "YearlyBudget"
 
-![Figure 1](results/mult-test.png)
+Now for the code "PerTimeCost_Budget", consider only the 4rth element, i.e., for K=3
+Path_constant_B in "PlottingYearlyBudget_K=3" is path_matrix_of_ks[3] in "PerTimeCost_Budget"
+constant_bd_solution_path in "PlottingYearlyBudget_K=3" is 45
+X_path_constant_Bnotrounded in "PlottingYearlyBudget_K=3" is budget_path_3d_matrix_of_ks[3] in "PerTimeCost_Budget"
+f_constant_B in "PlottingYearlyBudget_K=3" is F_constrained_matrix_of_ks[3] in "PerTimeCost_Budget"
 
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+3) run "PlottingYearlyBudget_K=3" to generate the figure
 
-![Figure 1](results/sum-test.png)
 
-## Replicating
+## Figures named "SimulationBasedAnalysis_GRP" and "TotalCostwrtK_GRP":
+1) run the code "Regret_GroupTesting", this will generate the following data files for all K values
+ a) "F_constrained_matrix_of_ks_RegretAPP1"
+ b) "solutionovertime_RegretAPP1"
+ c) "group_size_path_of_ksRegretAPP1"
+ d) "path_matrix_of_ksRegretAPP1"
+2) run the code "PureRobust_GroupTesting", this will generate the following data files 
+ a) "F_constrained_matrix_of_ks_RobustAPP1"
+ b) "solutionovertime_RobustAPP1"
+ c) "group_size_path_of_ksRobustAPP1"
+ d) "path_matrix_of_ksRobustAPP1"
+3) run code "GroupTesting_SamplingApproach" which reads those solutions and then perform the simulation based analysis
+Lines 1-231 to generate figure "SimulationBasedAnalysis_GRP" and lines 247-294 to generate figure "TotalCostwrtK_GRP"
 
-To replicate the results in [Figure 1](results/mult-test), do either
 
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
 
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+## Figures named "SimulationBasedAnalysis_Budget" and "TotalCostwrtK_Budget":
+1) run the code "Regret_Budget", this will generate the following data files for all K values
+ a) "F_constrained_matrix_of_ks_RegretAPP2"
+ b) "solutionovertime_RegretAPP2"
+ c) "group_size_path_of_ksRegretAPP2"
+ d) "path_matrix_of_ksRegretAPP2"
+2) run the code "PureRobust_Budget", this will generate the following data files 
+ a) "F_constrained_matrix_of_ks_RobustAPP2"
+ b) "solutionovertime_RobustAPP2"
+ c) "group_size_path_of_ksRobustAPP2"
+ d) "path_matrix_of_ksRobustAPP2"
+3) run code "Budget_SamplingApproach" which reads those solutions and then perform the simulation based analysis
+Lines 1-275 to generate figure "SimulationBasedAnalysis_Budget" and lines 290-336 to generate figure "TotalCostwrtK_Budget"
