@@ -11,9 +11,16 @@ Columns C, D and E in Sheet "Budget(2)" are the mean, upper, and lower bounds of
 
 
 ## Figure named "Computational Complexity":
-1) run the code ******DR HADI***** to generate the csv file titled "caseStudyNumericalExperimentsminmaxregret".
-2) run the code "Refined_Algo_ComputationalComplexity-Randomized" to generate the numpy data titled "data when N=25", "data when N=50", and "data when N=100".
-3) run the code "ChangeFormatComputationalComplextity_random and minmax" to change and fix the format of the above outputs
+1) run the matlabl code "numericalAnalysis_resourceAllocation.m". Note that all other matlab files need to be in the same directory.
+In the code, you set N to the desired level (25, 50, or 100). Once the code terminates, the results are stored variable Yexport. 
+These codes should result in data similar to "caseStudyNumericalExperimentsminmaxregret" or close, since the code is generating problem instances at random.)
+This is the only part where matlab code is required. However for the rest the code is python.
+Again this is requried to generate the csv file titled "caseStudyNumericalExperimentsminmaxregret".
+2) run the code "Refined_Algo_ComputationalComplexity-Randomized" to generate the numpy data titled "data when N=25", "data when N=50", and "data when N=100". (these are not uploaded,
+due to their size, however they can be generated and stored in the same directory)
+3) run the code "ChangeFormatComputationalComplextity_random and minmax" to change and fix the format of the above outputs and generate
+files "CaseStudyNumericalExperimentsrandomized when N=25" and "CaseStudyNumericalExperimentsrandomized when N=50" and 
+"CaseStudyNumericalExperimentsrandomized when N=100" used in plotting, as next.
 4) run the code "PlottingComputationalComplexity_random and minmax" to generate the figures
 
 
