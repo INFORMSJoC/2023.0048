@@ -1,6 +1,6 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# Paper's Title: Optimal System Adjustment Under Operational Constraints with Applications to Infectious Disease Screening
+# Generating Results
 
 In what below we provide a detailed description on how to use our codes to generate each of the figures which are in the results folder.
 
@@ -11,7 +11,7 @@ Columns C, D and E in Sheet "Budget(2)" are the mean, upper, and lower bounds of
 
 
 ## Figure named "Computational Complexity":
-1) run the matlabl code "numericalAnalysis_resourceAllocation.m". Note that all other matlab files need to be in the same directory.
+1) run the matlab code "numericalAnalysis_resourceAllocation.m". Note that all other matlab files need to be in the same directory.
 In the code, you set N to the desired level (25, 50, or 100). Once the code terminates, the results are stored variable Yexport. 
 These codes should result in data similar to "caseStudyNumericalExperimentsminmaxregret" or close, since the code is generating problem instances at random.)
 This is the only part where matlab code is required. However for the rest the code is python.
