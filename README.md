@@ -3,7 +3,7 @@
 # Guideline for Generating Results
 
 In what below we provide a detailed description on how to use our codes to generate each of the figures which are in the results folder. We note that
-we have also added all data generated from the codes and needed in other codes (e.g., plotting codes in the Data folder). So users might use those
+we have also added all data generated from the codes and needed in other codes (e.g., plotting codes in the data folder). So users might use those
 data files for validation purposes.
 
 ## Data for Prevalence Rates Used in all code files
