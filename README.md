@@ -152,3 +152,24 @@ Lines 1-231 generate figure "SimulationBasedAnalysis_GRP" and lines 247-294 gene
  d) "path_matrix_of_ksRobustAPP2"
 3) run code "Budget_SamplingApproach" which reads those solutions and then perform the simulation based analysis.
 Lines 1-275 generate figure "SimulationBasedAnalysis_Budget" and lines 290-336 generate figure "TotalCostwrtK_Budget"
+
+
+
+# Cite
+To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
+
+https://doi.org/10.1287/ijoc.2023.0048
+
+https://doi.org/10.1287/ijoc.2023.0048.cd
+
+Below is the BibTex for citing this snapshot of the repository.
+
+@misc{Shams2025Optimal,
+  author =        {Shams Eddin, Marwan and El-Amine, Hadi and Aprahamian, Hrayer},
+  publisher =     {INFORMS Journal on Computing},
+  title =         {Optimal System Adjustment Under Operational Constraints with Applications to Infectious Disease Screening},
+  year =          {2025},
+  doi =           {10.1287/ijoc.2023.0048.cd},
+  url =           {https://github.com/INFORMSJoC/2023.0048},
+  note =          {Available for download at https://github.com/INFORMSJoC/2023.0048},
+}
