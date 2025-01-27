@@ -169,7 +169,7 @@ Below is the BibTex for citing this snapshot of the repository.
 @misc{Shams2025Optimal,
   author =        {Shams Eddin, Marwan and El-Amine, Hadi and Aprahamian, Hrayer},
   publisher =     {INFORMS Journal on Computing},
-  title =         {Optimal System Adjustment Under Operational Constraints with Applications to Infectious Disease Screening},
+  title =         {{Optimal System Adjustment Under Operational Constraints with Applications to Infectious Disease Screening},
   year =          {2025},
   doi =           {10.1287/ijoc.2023.0048.cd},
   url =           {https://github.com/INFORMSJoC/2023.0048},
