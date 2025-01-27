@@ -2,47 +2,46 @@
 
 # Guideline for Generating Results
 
-In what below we provide a detailed description on how to use our codes to generate each of the figures which are in the results folder. We note that
-we have also added all data generated from the codes and needed in other codes (e.g., plotting codes in the data folder). So users might use those
-data files for validation purposes.
+In what below we provide a detailed description on how to use our codes to generate each of the figures which are present in the folder named "results" in this repo. We note that
+we have also added all the data files which are generated from some code files and needed in other code files (e.g., plotting codes in the folder named "scripts"). So these might be used for validation purposes.
 
 ## Data for Prevalence Rates Used in all code files
-Calculations are being done in the excel file named "DataForPrevalenceRates" in the data folder in the sheets "GRP", "Budget(1)" and "Budget(2)".
-Columns C, D, and E in Sheet "Budget(2)" are the mean, upper, and lower bounds of the prevalence rates for each disease we have in the code files
+The main calculations are done in the excel file named "DataForPrevalenceRates" in the folder named "data", specifically in sheets "GRP", "Budget(1)" and "Budget(2)".
+Columns C, D, and E, in sheet "Budget(2)", are the columns for the mean, upper, and lower bounds of the prevalence rates for each disease which we have in the code files.
 
 
 
 ## Figure named "Computational Complexity":
-1) run the matlab code "numericalAnalysis_resourceAllocation.m". Note that all other matlab files need to be in the same directory.
+1) Run the matlab code "numericalAnalysis_resourceAllocation.m". Note that all other matlab files need to be in the same directory.
 In the code, you set N to the desired level (25, 50, or 100). Once the code terminates, the results are stored in variable Yexport. 
-These codes should result in data similar to "caseStudyNumericalExperimentsminmaxregret" or close, since the code is generating problem instances at random.)
+These codes should result in data similar to "caseStudyNumericalExperimentsminmaxregret" or close, since the code is generating problem instances at random.
 This is the only part where matlab code is required. However for the rest the code is python.
 Again this is requried to generate the csv file titled "caseStudyNumericalExperimentsminmaxregret".
-2) run the code "Refined_Algo_ComputationalComplexity-Randomized" to generate the numpy data titled "data when N=25", "data when N=50", and "data when N=100". (these are not uploaded,
-due to their size, however they can be generated and stored in the same directory)
-3) run the code "ChangeFormatComputationalComplextity_random and minmax" to change and fix the format of the above outputs and generate
+2) Run the code "Refined_Algo_ComputationalComplexity-Randomized" to generate the numpy data titled "data when N=25", "data when N=50", and "data when N=100". (these are not uploaded,
+due to their size, however they can be generated and stored in the same directory).
+3) Run the code "ChangeFormatComputationalComplextity_random and minmax" to change and fix the format of the above outputs and generate
 files "CaseStudyNumericalExperimentsrandomized when N=25", "CaseStudyNumericalExperimentsrandomized when N=50" and 
 "CaseStudyNumericalExperimentsrandomized when N=100" used in plotting, as in what next.
-4) run the code "PlottingComputationalComplexity_random and minmax" to generate the figures
+4) Run the code "PlottingComputationalComplexity_random and minmax" to generate the figures
 
 
 ## Figure named "GroupSizeWithTime":
-1) run the code "Regret_GroupTesting" which generates the following data files 
+1) Run the code "Regret_GroupTesting" which generates the following data files 
  a) "F_constrained_matrix_of_ks_RegretAPP1"
  b) "solutionovertime_RegretAPP1"
  c) "group_size_path_of_ksRegretAPP1"
  d) "path_matrix_of_ksRegretAPP1"
 Those files are used to get the numbers inside the code file "PlottingGroupSizewithTime"
-2) run the code "PlottingGroupSizewithTime" to generate the figure
+2) Run the code "PlottingGroupSizewithTime" to generate the figure
 
 
 ## Figure named "PerTimeCost_GRP":
-1) run the code "Regret_GroupTesting" which generates the following data files for all K values
+1) Run the code "Regret_GroupTesting" which generates the following data files for all K values
  a) "F_constrained_matrix_of_ks_RegretAPP1"
  b) "solutionovertime_RegretAPP1"
  c) "group_size_path_of_ksRegretAPP1"
  d) "path_matrix_of_ksRegretAPP1"
-2) run the code "PureRobust_GroupTesting" which generates the following data files 
+2) Run the code "PureRobust_GroupTesting" which generates the following data files 
  a) "F_constrained_matrix_of_ks_RobustAPP1"
  b) "solutionovertime_RobustAPP1"
  c) "group_size_path_of_ksRobustAPP1"
@@ -63,17 +62,17 @@ the code file "PlottingFunction_GroupTesting_ActualData-with Robust" are also co
 for the following variables: MinMaxDistance, Total_Average_distance, MinMaxDistance_from16, Total_Average_distance_from16
 from 1) and Total_Average_distance_from16 from 2)(resp.), (again first 4 elements)
 Now that we have all values needed in "PlottingFunction_GroupTesting_ActualData-with Robust" we,
-2) run the code "PlottingFunction_GroupTesting_ActualData-with Robust" to generate the figure
+2) Run the code "PlottingFunction_GroupTesting_ActualData-with Robust" to generate the figure
 
 
 
 ## Figure named "PerTimeCost_Budget":
-1) run the code "Regret_Budget" which generates the following data files for all K values
+1) Run the code "Regret_Budget" which generates the following data files for all K values
  a) "F_constrained_matrix_of_ks_RegretAPP2"
  b) "solutionovertime_RegretAPP2"
  c) "group_size_path_of_ksRegretAPP2"
  d) "path_matrix_of_ksRegretAPP2"
-2) run the code "PureRobust_Budget" which generates the following data files 
+2) Run the code "PureRobust_Budget" which generates the following data files 
  a) "F_constrained_matrix_of_ks_RobustAPP2"
  b) "solutionovertime_RobustAPP2"
  c) "group_size_path_of_ksRobustAPP2"
@@ -92,24 +91,24 @@ Similarly, numbers for MinMaxDistance, Total_Average_distance, and Total_Average
 the code file "PlottingFunction_Budget_ActualData-with Robust" are also copied and pasted from the console 
 for the following variables: MinMaxDistance, Total_Average_distance from 1) and Total_Average_distance from 2)(resp.), (again first 4 elements)
 Now that we have all values needed in "PlottingFunction_Budget_ActualData-with Robust" we,
-2) run the code "PlottingFunction_Budget_ActualData-with Robust" to generate the figure
+2) Run the code "PlottingFunction_Budget_ActualData-with Robust" to generate the figure
 
 
 ## Figure named "Prev_Babesiosis_WNV":
-1) run the code "AdditionalLaTeXFigures", lines 1-5 (to import packages)and lines 249-319 (to generate the figure)
+1) Run the code "AdditionalLaTeXFigures", lines 1-5 (to import packages)and lines 249-319 (to generate the figure)
 
 
 ## Figure named "Prev_WNV_Reported Numbers":
-1) run the code "AdditionalLaTeXFigures", lines 1-5 (to import packages)and lines 137-183 (to generate the figure)
+1) Run the code "AdditionalLaTeXFigures", lines 1-5 (to import packages)and lines 137-183 (to generate the figure)
 
 
 ## Figure named "UncertaintySet_CI":
-1) run the code "AdditionalLaTeXFigures", lines 1-26 (to import packages and define function)and lines 326-359 (to generate the figure)
+1) Run the code "AdditionalLaTeXFigures", lines 1-26 (to import packages and define function)and lines 326-359 (to generate the figure)
 
 
 ## Figure named "YearlyBudget":
-1) run the code "YearlyBudget" and copy from the console the following data and paste them in the file "PlottingYearlyBudget_K=3"
-2) run code "PerTimeCost_Budget" to generate 1)a, 1)b, 1)c, and 1)d and copy from the console the following data and paste them in the file "PlottingYearlyBudget_K=3"
+1) Run the code "YearlyBudget" and copy from the console the following data and paste them in the file "PlottingYearlyBudget_K=3"
+2) Run code "PerTimeCost_Budget" to generate 1)a, 1)b, 1)c, and 1)d and copy from the console the following data and paste them in the file "PlottingYearlyBudget_K=3"
 Step 1) and 2) here are as follows:
 Path_avg_B in "PlottingYearlyBudget_K=3" is avg_bd_solution_path in "YearlyBudget"
 avg_bd_solution_path in "PlottingYearlyBudget_K=3" is avg_bd_solution in "YearlyBudget"
@@ -122,37 +121,37 @@ constant_bd_solution_path in "PlottingYearlyBudget_K=3" is 45
 X_path_constant_Bnotrounded in "PlottingYearlyBudget_K=3" is budget_path_3d_matrix_of_ks[3] in "PerTimeCost_Budget"
 f_constant_B in "PlottingYearlyBudget_K=3" is F_constrained_matrix_of_ks[3] in "PerTimeCost_Budget"
 
-3) run "PlottingYearlyBudget_K=3" to generate the figure
+3) Run "PlottingYearlyBudget_K=3" to generate the figure
 
 
 ## Figures named "SimulationBasedAnalysis_GRP" and "TotalCostwrtK_GRP":
-1) run the code "Regret_GroupTesting", which generates the following data files for all K values
+1) Run the code "Regret_GroupTesting", which generates the following data files for all K values
  a) "F_constrained_matrix_of_ks_RegretAPP1"
  b) "solutionovertime_RegretAPP1"
  c) "group_size_path_of_ksRegretAPP1"
  d) "path_matrix_of_ksRegretAPP1"
-2) run the code "PureRobust_GroupTesting" which generates the following data files 
+2) Run the code "PureRobust_GroupTesting" which generates the following data files 
  a) "F_constrained_matrix_of_ks_RobustAPP1"
  b) "solutionovertime_RobustAPP1"
  c) "group_size_path_of_ksRobustAPP1"
  d) "path_matrix_of_ksRobustAPP1"
-3) run code "GroupTesting_SamplingApproach" which reads those solutions and then performs the simulation based analysis. 
+3) Run code "GroupTesting_SamplingApproach" which reads those solutions and then performs the simulation based analysis. 
 Lines 1-231 generate figure "SimulationBasedAnalysis_GRP" and lines 247-294 generate figure "TotalCostwrtK_GRP"
 
 
 
 ## Figures named "SimulationBasedAnalysis_Budget" and "TotalCostwrtK_Budget":
-1) run the code "Regret_Budget", this will generate the following data files for all K values
+1) Run the code "Regret_Budget", this will generate the following data files for all K values
  a) "F_constrained_matrix_of_ks_RegretAPP2"
  b) "solutionovertime_RegretAPP2"
  c) "group_size_path_of_ksRegretAPP2"
  d) "path_matrix_of_ksRegretAPP2"
-2) run the code "PureRobust_Budget", this will generate the following data files 
+2) Run the code "PureRobust_Budget", this will generate the following data files 
  a) "F_constrained_matrix_of_ks_RobustAPP2"
  b) "solutionovertime_RobustAPP2"
  c) "group_size_path_of_ksRobustAPP2"
  d) "path_matrix_of_ksRobustAPP2"
-3) run code "Budget_SamplingApproach" which reads those solutions and then perform the simulation based analysis.
+3) Run code "Budget_SamplingApproach" which reads those solutions and then perform the simulation based analysis.
 Lines 1-275 generate figure "SimulationBasedAnalysis_Budget" and lines 290-336 generate figure "TotalCostwrtK_Budget"
 
 
