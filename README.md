@@ -1,6 +1,6 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# Generating Results
+# Guideline for Generating Results
 
 In what below we provide a detailed description on how to use our codes to generate each of the figures which are in the results folder.
 
